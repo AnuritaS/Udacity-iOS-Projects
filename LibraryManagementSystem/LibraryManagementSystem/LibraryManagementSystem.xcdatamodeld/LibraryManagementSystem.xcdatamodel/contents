@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Books" representedClassName="Books" syncable="YES" codeGenerationType="class">
+        <attribute name="assigned" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assignedTo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Student" inverseName="issued" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="regID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="issued" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Books" inverseName="assignedTo" inverseEntity="Books" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Student" positionX="250" positionY="36" width="128" height="73"/>
+        <element name="Books" positionX="556" positionY="-72" width="128" height="118"/>
+    </elements>
+</model>

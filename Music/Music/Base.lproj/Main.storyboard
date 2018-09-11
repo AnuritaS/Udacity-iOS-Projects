@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Music View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MusicViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="9AI-6T-AgV">
+                                <rect key="frame" x="93" y="268" width="189" height="31"/>
+                                <color key="minimumTrackTintColor" red="1" green="0.64313725490196072" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </slider>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMi-mA-8dv">
+                                <rect key="frame" x="0.0" y="411" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem width="122" style="plain" systemItem="fixedSpace" id="BK8-cO-xhZ"/>
+                                    <barButtonItem systemItem="play" id="5lt-iS-rCC">
+                                        <color key="tintColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="AQ1-9O-30D"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="pause" id="Avq-hK-JqP">
+                                        <color key="tintColor" red="1" green="0.64313725490196072" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="pauseWithSender:" destination="BYZ-38-t0r" id="ps3-aW-y83"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="stop" id="bFy-uJ-aFd">
+                                        <color key="tintColor" red="1" green="0.64313725490196072" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="stopWithSender:" destination="BYZ-38-t0r" id="AE1-AB-9P1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djg-vb-knM">
+                                <rect key="frame" x="99" y="336" width="177" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aBU-Lg-k3E"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.64313725490196072" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9AI-6T-AgV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="248" id="BJT-bQ-vqi"/>
+                            <constraint firstItem="9AI-6T-AgV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="BYi-KQ-aD7"/>
+                            <constraint firstItem="djg-vb-knM" firstAttribute="top" secondItem="9AI-6T-AgV" secondAttribute="bottom" constant="38" id="J1l-Ct-eSH"/>
+                            <constraint firstItem="djg-vb-knM" firstAttribute="trailing" secondItem="9AI-6T-AgV" secondAttribute="trailing" constant="-4" id="ULW-gF-d5X"/>
+                            <constraint firstItem="IMi-mA-8dv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X4k-wT-h5E"/>
+                            <constraint firstItem="9AI-6T-AgV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mCz-vK-TsY"/>
+                            <constraint firstItem="IMi-mA-8dv" firstAttribute="top" secondItem="djg-vb-knM" secondAttribute="bottom" constant="45" id="tsy-Xx-a1G"/>
+                            <constraint firstItem="djg-vb-knM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="83" id="w07-hc-y67"/>
+                            <constraint firstItem="IMi-mA-8dv" firstAttribute="centerX" secondItem="9AI-6T-AgV" secondAttribute="centerX" id="ygM-AR-Org"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="play" id="ZMg-zI-yCD">
+                            <connections>
+                                <action selector="playWithSender:" destination="BYZ-38-t0r" id="fms-7T-zzH"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="dnV-YK-X0R"/>
+                    <connections>
+                        <outlet property="pause" destination="Avq-hK-JqP" id="wvM-5e-JeM"/>
+                        <outlet property="play" destination="5lt-iS-rCC" id="bZc-92-3Tr"/>
+                        <outlet property="slider" destination="9AI-6T-AgV" id="ngh-dk-Z0C"/>
+                        <outlet property="timeText" destination="djg-vb-knM" id="Omg-ju-474"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="JX6-4E-lrc">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="fQl-Ul-Ine" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBt-HL-QIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="-116.49175412293854"/>
+        </scene>
+    </scenes>
+</document>
